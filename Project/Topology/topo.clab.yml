@@ -7,18 +7,20 @@ topology:
       kind: linux
       image: frrouting/frr:latest
 
+
       binds:
-        - leaf1/config.sh:/config.sh
+        - ../Leaf1/config.sh:/config.sh
+        - ../group_files/daemons:/etc/frr/daemons
       exec:
         - chmod +x /config.sh
         - ./config.sh
-      exec:
     leaf2:
       kind: linux
       image: frrouting/frr:latest
       
       binds:
-        - leaf2/config.sh:/config.sh
+        - ../Leaf2/config.sh:/config.sh
+        - ../group_files/daemons:/etc/frr/daemons
       exec:
         - chmod +x /config.sh
         - ./config.sh
@@ -27,7 +29,8 @@ topology:
       image: frrouting/frr:latest
 
       binds:
-        - spine1/config.sh:/config.sh
+        - ../Spine1/config.sh:/config.sh
+        - ../group_files/daemons:/etc/frr/daemons
       exec:
         - chmod +x /config.sh
         - ./config.sh
@@ -36,16 +39,17 @@ topology:
       image: frrouting/frr:latest
 
       binds:
-        - spine2/config.sh:/config.sh
+        - ../Spine2/config.sh:/config.sh
+        - ../group_files/daemons:/etc/frr/daemons
       exec:
         - chmod +x /config.sh
         - ./config.sh
     host1:
       kind: linux
-      image: apline:latest
+      image: alpine:latest
 
       binds:
-        - host1/config.sh:/config.sh
+        - ../Host1/config.sh:/config.sh
       exec:
         - chmod +x /config.sh
         - ./config.sh
@@ -53,7 +57,7 @@ topology:
       kind: linux
       image: alpine:latest
       binds:
-        - host2/config.sh:/config.sh
+        - ../Host2/config.sh:/config.sh
       exec:
         - chmod +x /config.sh
         - ./config.sh

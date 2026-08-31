@@ -1,0 +1,305 @@
+{
+  "name": "EVPN_test",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-8a8f8bf956e0",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJsOgO4wq1ujm2QjdEw6AjFdl4n0pPVwJJvQYqT6AhpU","ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF5vj3La07hMt2HePW2LiKELn5hx0BPHnvoCyzzPxAzZ","ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCs6a6l+Fn5sJQGiIGftaty2n2rkQKwTDSisCt3i2eu2TFmXmnx0+OS6CTAmm0wm2xZMzoLPqFsvDTHFzLtzVCMxxplRfSAGoSrIVO42MT+AQZOS7QNiEtTwIZ95jTuRGxKzbmU50PClPuu465Hxesg8EZpaKp5aEb27WbNM1p+ls4sXswL+UUT28Ed+lcxDzMAjW8QTqO1mU+HbZeQhdYqoTPw9qLJyfkfcH09uxBsyM+2ejhFdLIsfHXY3NJiJ0JlXNoROVRwkK0hkfXtO4cND+OulMFSkwrQGYpRRMqsGfXu2Kq7joSDpG7kesEzm0UXAb5pfnICQgUhQUgLeC4YZVjOpTnvVyG+4vAQuLIvRmIADEY4vNUgimNZAb8JMztoDU1xB9Wkkd51tNRxLsQiMTIfLgZUfiK97onXIHR04wz9qpFc1APVc9rK8zppjf6cJcp3UC/xNPQ/gq269aluHjhNsJyFNkJ8mqH6nnZBI9UGfrpatcj5AKAMLzGb3m0=","ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB7of2zq8uoindK3N0hElj064l6/zrvOjf3QLkb17nrr"],
+  "nodes": {
+    "host1": {
+      "index": "0",
+      "shortname": "host1",
+      "longname": "clab-EVPN_test-host1",
+      "fqdn": "host1.EVPN_test.io",
+      "group": "",
+      "labdir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/host1",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/host1",
+        "clab-node-longname": "clab-EVPN_test-host1",
+        "clab-node-name": "host1",
+        "clab-node-type": "",
+        "clab-owner": "rojag",
+        "clab-topo-file": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/topo.clab.yml",
+        "containerlab": "EVPN_test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "host2": {
+      "index": "1",
+      "shortname": "host2",
+      "longname": "clab-EVPN_test-host2",
+      "fqdn": "host2.EVPN_test.io",
+      "group": "",
+      "labdir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/host2",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/host2",
+        "clab-node-longname": "clab-EVPN_test-host2",
+        "clab-node-name": "host2",
+        "clab-node-type": "",
+        "clab-owner": "rojag",
+        "clab-topo-file": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/topo.clab.yml",
+        "containerlab": "EVPN_test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf1": {
+      "index": "2",
+      "shortname": "leaf1",
+      "longname": "clab-EVPN_test-leaf1",
+      "fqdn": "leaf1.EVPN_test.io",
+      "group": "",
+      "labdir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/leaf1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/leaf1",
+        "clab-node-longname": "clab-EVPN_test-leaf1",
+        "clab-node-name": "leaf1",
+        "clab-node-type": "",
+        "clab-owner": "rojag",
+        "clab-topo-file": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/topo.clab.yml",
+        "containerlab": "EVPN_test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf2": {
+      "index": "3",
+      "shortname": "leaf2",
+      "longname": "clab-EVPN_test-leaf2",
+      "fqdn": "leaf2.EVPN_test.io",
+      "group": "",
+      "labdir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/leaf2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/leaf2",
+        "clab-node-longname": "clab-EVPN_test-leaf2",
+        "clab-node-name": "leaf2",
+        "clab-node-type": "",
+        "clab-owner": "rojag",
+        "clab-topo-file": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/topo.clab.yml",
+        "containerlab": "EVPN_test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine1": {
+      "index": "4",
+      "shortname": "spine1",
+      "longname": "clab-EVPN_test-spine1",
+      "fqdn": "spine1.EVPN_test.io",
+      "group": "",
+      "labdir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/spine1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/spine1",
+        "clab-node-longname": "clab-EVPN_test-spine1",
+        "clab-node-name": "spine1",
+        "clab-node-type": "",
+        "clab-owner": "rojag",
+        "clab-topo-file": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/topo.clab.yml",
+        "containerlab": "EVPN_test"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine2": {
+      "index": "5",
+      "shortname": "spine2",
+      "longname": "clab-EVPN_test-spine2",
+      "fqdn": "spine2.EVPN_test.io",
+      "group": "",
+      "labdir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/spine2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/spine2",
+        "clab-node-longname": "clab-EVPN_test-spine2",
+        "clab-node-name": "spine2",
+        "clab-node-type": "",
+        "clab-owner": "rojag",
+        "clab-topo-file": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/topo.clab.yml",
+        "containerlab": "EVPN_test"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "spine1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:9c:48:f2",
+          "peer": "z"
+        },
+        "z": {
+          "node": "leaf1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:54:0b:3c",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "spine1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:1a:4b:eb",
+          "peer": "z"
+        },
+        "z": {
+          "node": "leaf2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:9c:56:40",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "spine2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:ff:9e:f7",
+          "peer": "z"
+        },
+        "z": {
+          "node": "leaf1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:08:cd:12",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "spine2",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:75:f7:cd",
+          "peer": "z"
+        },
+        "z": {
+          "node": "leaf2",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:32:ba:2a",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "leaf1",
+          "interface": "eth67",
+          "mac": "aa:c1:ab:09:ef:8f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "host1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:4e:45:14",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "leaf2",
+          "interface": "eth67",
+          "mac": "aa:c1:ab:9c:1c:ea",
+          "peer": "z"
+        },
+        "z": {
+          "node": "host2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:e2:e8:f4",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
