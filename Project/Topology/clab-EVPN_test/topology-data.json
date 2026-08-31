@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-8a8f8bf956e0",
+        "bridge": "br-70a3bda35b61",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "3fff:172:20:20::/64",
@@ -28,13 +28,13 @@
       "image": "alpine:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-address": "172.20.20.4",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-mgmt-net-bridge": "br-70a3bda35b61",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/host1",
@@ -65,7 +65,7 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-mgmt-net-bridge": "br-70a3bda35b61",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/host2",
@@ -90,13 +90,13 @@
       "image": "frrouting/frr:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-address": "172.20.20.2",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-mgmt-net-bridge": "br-70a3bda35b61",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/leaf1",
@@ -121,13 +121,13 @@
       "image": "frrouting/frr:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-address": "172.20.20.6",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-mgmt-net-bridge": "br-70a3bda35b61",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/leaf2",
@@ -152,13 +152,13 @@
       "image": "frrouting/frr:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-address": "172.20.20.7",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-mgmt-net-bridge": "br-70a3bda35b61",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/spine1",
@@ -183,13 +183,13 @@
       "image": "frrouting/frr:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-address": "172.20.20.5",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-8a8f8bf956e0",
+        "clab-mgmt-net-bridge": "br-70a3bda35b61",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/rojag/Documents/Praca_Inzynierska_Projekt/Project/Topology/clab-EVPN_test/spine2",
@@ -210,13 +210,13 @@
         "a": {
           "node": "spine1",
           "interface": "eth1",
-          "mac": "aa:c1:ab:9c:48:f2",
+          "mac": "aa:c1:ab:0f:4f:23",
           "peer": "z"
         },
         "z": {
           "node": "leaf1",
           "interface": "eth1",
-          "mac": "aa:c1:ab:54:0b:3c",
+          "mac": "aa:c1:ab:76:cf:7a",
           "peer": "a"
         }
       }
@@ -226,13 +226,13 @@
         "a": {
           "node": "spine1",
           "interface": "eth2",
-          "mac": "aa:c1:ab:1a:4b:eb",
+          "mac": "aa:c1:ab:8e:d1:dc",
           "peer": "z"
         },
         "z": {
           "node": "leaf2",
           "interface": "eth1",
-          "mac": "aa:c1:ab:9c:56:40",
+          "mac": "aa:c1:ab:c8:cc:21",
           "peer": "a"
         }
       }
@@ -242,13 +242,13 @@
         "a": {
           "node": "spine2",
           "interface": "eth1",
-          "mac": "aa:c1:ab:ff:9e:f7",
+          "mac": "aa:c1:ab:15:40:9d",
           "peer": "z"
         },
         "z": {
           "node": "leaf1",
           "interface": "eth2",
-          "mac": "aa:c1:ab:08:cd:12",
+          "mac": "aa:c1:ab:a5:76:82",
           "peer": "a"
         }
       }
@@ -258,13 +258,13 @@
         "a": {
           "node": "spine2",
           "interface": "eth2",
-          "mac": "aa:c1:ab:75:f7:cd",
+          "mac": "aa:c1:ab:0e:16:db",
           "peer": "z"
         },
         "z": {
           "node": "leaf2",
           "interface": "eth2",
-          "mac": "aa:c1:ab:32:ba:2a",
+          "mac": "aa:c1:ab:35:a5:03",
           "peer": "a"
         }
       }
@@ -274,13 +274,13 @@
         "a": {
           "node": "leaf1",
           "interface": "eth67",
-          "mac": "aa:c1:ab:09:ef:8f",
+          "mac": "aa:c1:ab:d2:f2:35",
           "peer": "z"
         },
         "z": {
           "node": "host1",
           "interface": "eth1",
-          "mac": "aa:c1:ab:4e:45:14",
+          "mac": "aa:c1:ab:64:5b:06",
           "peer": "a"
         }
       }
@@ -290,13 +290,13 @@
         "a": {
           "node": "leaf2",
           "interface": "eth67",
-          "mac": "aa:c1:ab:9c:1c:ea",
+          "mac": "aa:c1:ab:11:d4:77",
           "peer": "z"
         },
         "z": {
           "node": "host2",
           "interface": "eth1",
-          "mac": "aa:c1:ab:e2:e8:f4",
+          "mac": "aa:c1:ab:16:b4:11",
           "peer": "a"
         }
       }

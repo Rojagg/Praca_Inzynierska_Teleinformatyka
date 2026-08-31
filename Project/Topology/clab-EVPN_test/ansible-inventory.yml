@@ -8,14 +8,14 @@ all:
     linux:
       hosts:
         clab-EVPN_test-host1:
-          ansible_host: 172.20.20.5
+          ansible_host: 172.20.20.4
         clab-EVPN_test-host2:
           ansible_host: 172.20.20.3
         clab-EVPN_test-leaf1:
-          ansible_host: 172.20.20.7
-        clab-EVPN_test-leaf2:
-          ansible_host: 172.20.20.4
-        clab-EVPN_test-spine1:
           ansible_host: 172.20.20.2
-        clab-EVPN_test-spine2:
+        clab-EVPN_test-leaf2:
           ansible_host: 172.20.20.6
+        clab-EVPN_test-spine1:
+          ansible_host: 172.20.20.7
+        clab-EVPN_test-spine2:
+          ansible_host: 172.20.20.5

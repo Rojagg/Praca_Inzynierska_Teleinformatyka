@@ -11,6 +11,7 @@ topology:
       binds:
         - ../Leaf1/config.sh:/config.sh
         - ../group_files/daemons:/etc/frr/daemons
+        - ../Leaf1/vtysh.conf:/etc/frr/frr.conf
       exec:
         - chmod +x /config.sh
         - ./config.sh
@@ -20,6 +21,7 @@ topology:
       
       binds:
         - ../Leaf2/config.sh:/config.sh
+        - ../Leaf2/vtysh.conf:/etc/frr/frr.conf
         - ../group_files/daemons:/etc/frr/daemons
       exec:
         - chmod +x /config.sh
@@ -30,6 +32,7 @@ topology:
 
       binds:
         - ../Spine1/config.sh:/config.sh
+        - ../Spine1/vtysh.conf:/etc/frr/frr.conf
         - ../group_files/daemons:/etc/frr/daemons
       exec:
         - chmod +x /config.sh
@@ -40,6 +43,7 @@ topology:
 
       binds:
         - ../Spine2/config.sh:/config.sh
+        - ../Spine2/vtysh.conf:/etc/frr/frr.conf
         - ../group_files/daemons:/etc/frr/daemons
       exec:
         - chmod +x /config.sh
