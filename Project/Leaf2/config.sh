@@ -43,8 +43,8 @@ bridge vlan add dev vxlan0 vid 1100
 bridge vni add dev vxlan0 vni 100
 bridge vlan add dev vxlan0 vid 1100 tunnel_info id 100
 ip link add vrf1br link br0 type vlan id 1100
-ip link set vrf1br address 11:22:33:44:55:67 addregenmode none
-ip link set vrf2br master vrf1
+ip link set vrf1br address 11:22:33:44:55:67 addrgenmode none
+ip link set vrf1br master vrf1
 
 ##
 #	L2VNI 110 --> VLAN 10
@@ -72,7 +72,7 @@ bridge vlan add dev vxlan0 vid 11 tunnel_info id 111
 ip link add vlan11 link br0 type vlan id 11
 ip link set vlan11 master vrf1
 ip link set vlan11 addr aa:bb:cc:00:01:6f
-ip addr add 10.0.11.2/24 dev vlan20
+ip addr add 10.0.11.2/24 dev vlan11
 ip link set vlan11 up
 
 
@@ -92,8 +92,8 @@ bridge vlan add dev vxlan0 vid 1200
 bridge vni add dev vxlan0 vni 200
 bridge vlan add dev vxlan0 vid 1200 tunnel_info id 200
 ip link add vrf1br link br0 type vlan id 1200
-ip link set vrf2br address 11:22:33:44:55:67 addregenmode none
-ip link set vrf2br master vrf1
+ip link set vrf2br address 11:22:33:44:55:67 addrgenmode none
+ip link set vrf2br master vrf2
 
 ##
 #       L2VNI 120 --> VLAN 20
@@ -107,7 +107,7 @@ bridge vlan add dev vxlan0 vid 20 tunnel_info id 120
 ip link add vlan20 link br0 type vlan id 20
 ip link set vlan20 master vrf2
 ip link set vlan20 addr aa:bb:cc:00:01:78
-ip addr add 10.0.20.2/24 dev vlan10
+ip addr add 10.0.20.2/24 dev vlan20
 ip link set vlan20 up
 
 ##
@@ -121,5 +121,17 @@ bridge vlan add dev vxlan0 vid 21 tunnel_info id 121
 ip link add vlan21 link br0 type vlan id 21
 ip link set vlan21 master vrf2
 ip link set vlan21 addr aa:bb:cc:00:01:79
-ip addr add 10.0.21.2/24 dev vlan20
+ip addr add 10.0.21.2/24 dev vlan21
 ip link set vlan21 up
+
+##
+# 	Server facing interace
+##
+
+ip link set eth10 master br0
+
+bridge vlan add dev eth10 vid 10
+bridge vlan add dev eth10 vid 11
+bridge vlan add dev eth10 vid 20
+bridge vlan add dev eth10 vid 21
+
