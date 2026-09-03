@@ -1,0 +1,74 @@
+name: EVPN_test
+
+topology:
+  nodes:
+
+    leaf1:
+      kind: linux
+      image: frr-custom:1.1
+
+
+      binds:
+        - ../Leaf1/config.sh:/config.sh
+        - ../group_files/daemons:/etc/frr/daemons
+        - ../Leaf1/vtysh.conf:/etc/frr/frr.conf
+      exec:
+        - chmod +x /config.sh
+        - ./config.sh
+    leaf2:
+      kind: linux
+      image: frr-custom:1.1 
+      
+      binds:
+        - ../Leaf2/config.sh:/config.sh
+        - ../Leaf2/vtysh.conf:/etc/frr/frr.conf
+        - ../group_files/daemons:/etc/frr/daemons
+      exec:
+        - chmod +x /config.sh
+        - ./config.sh
+    spine1:
+      kind: linux
+      image: frr-custom:1.1
+
+      binds:
+        - ../Spine1/config.sh:/config.sh
+        - ../Spine1/vtysh.conf:/etc/frr/frr.conf
+        - ../group_files/daemons:/etc/frr/daemons
+      exec:
+        - chmod +x /config.sh
+        - ./config.sh
+    spine2:
+      kind: linux
+      image: frr-custom:1.1
+
+      binds:
+        - ../Spine2/config.sh:/config.sh
+        - ../Spine2/vtysh.conf:/etc/frr/frr.conf
+        - ../group_files/daemons:/etc/frr/daemons
+      exec:
+        - chmod +x /config.sh
+        - ./config.sh
+    host1:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool 
+
+      binds:
+        - ../Host1/config.sh:/config.sh
+      exec:
+        - chmod +x /config.sh
+        - ./config.sh
+    host2:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool 
+      binds:
+        - ../Host2/config.sh:/config.sh
+      exec:
+        - chmod +x /config.sh
+        - ./config.sh
+  links:
+    - endpoints: ["spine1:eth1", "leaf1:eth1"]
+    - endpoints: ["spine1:eth2", "leaf2:eth1"]
+    - endpoints: ["spine2:eth1", "leaf1:eth2"]
+    - endpoints: ["spine2:eth2", "leaf2:eth2"]
+    - endpoints: ["leaf1:eth10", "host1:eth1"]
+    - endpoints: ["leaf2:eth10", "host2:eth1"]
